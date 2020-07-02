@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/getdetails/" method="post" >
+    {% csrf_token %}
+    <h1 align="center">delhi to mumbai flights details</h1>
+    <h3 ><font color="#d2691e">select any one of the airline website </font>  </h3>
+    select date: <input type="date" name="date"><br>
+    <input type="submit" value="vistara" name="airline"><br>
+    <input type="submit" value="MakeMyTrip" name="airline"><br>
+    <input type="submit" value="yatra" name="airline">
+</form>
+</body>
+</html>

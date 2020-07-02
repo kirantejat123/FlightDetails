@@ -1,0 +1,67 @@
+<html>
+<head>
+
+</head>
+<body>
+<table border="2">
+{% if vistara %}
+    <tr >
+<td>flight name</td>
+<td>flight number</td>
+<td>flight origin</td>
+<td>flight destination</td>
+<td>flight destinationTime</td>
+    </tr>
+
+{% for i in vistara %}
+<tr>
+<td>AIR VISTARA</td>
+<td>{{ i.f_no }}</td>
+<td>{{ i.f_origin }}</td>
+<td>{{ i.f_destPlace }}</td>
+<td>{{ i.f_destTime}}</td>
+</tr>
+
+
+{% endfor %}
+{% endif %}
+{% if makemytrip %}
+
+<td>flight name</td>
+<td>flight number</td>
+<td>flight departuretime</td>
+<td>flight destination</td>
+<td>flight arrivaltime</td>
+<td>flight arrivalplace</td>
+</tr>
+{% for i in makemytrip %}
+<tr>
+<td>{{ i.f_name }}</td>
+<td>{{ i.f_number }}</td>
+<td>{{ i.f_departuretime }}</td>
+<td>{{ i.f_departureplace}}</td>
+<td>{{ i.f_arrivaltime }}</td>
+<td>{{ i.f_arrivalplace }}</td>
+</tr>
+{% endfor %}
+{% endif %}
+{% if yatra %}
+<tr>
+<td>flight name</td>
+<td>flight number</td>
+<td>flight departuretimr</td>
+<td>flight arrivaltime</td>
+</tr>
+{% for i in yatra %}
+<tr>
+<td>{{ i.f_name }}</td>
+<td>{{ i.f_number }}</td>
+<td>{{ i.f_departuretime}}</td>
+<td>{{ i.f_arrivaltime }}</td>
+</tr>
+{% endfor %}
+{% endif %}
+
+</table>
+</body>
+</html>
